@@ -112,6 +112,5 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:/home/dell/lammps/build"
 export PATH="$PATH:/home/dell/.venv/research/bin"
-#export PATH="$PATH/home/dell/Downloads/vmd-1.9.3.bin.LINUXAMD64-CUDA8-OptiX4-OSPRay111p1.opengl/vmd-1.9.3/src" 
 alias -g mvmd="/home/dell/Desktop/Research/vmd-1.9.3.bin.LINUXAMD64-CUDA8-OptiX4-OSPRay111p1.opengl/vmd-1.9.3/src" 
 alias -g ovito="/home/dell/Desktop/Research/ovito-basic-3.8.4-x86_64/bin/ovito"
