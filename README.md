@@ -9,10 +9,14 @@ type in your passwrod, then hit enter/return to make the file executable
 
 Following this command, enter
 
-./lammps_install.sh
+`./lammps_install.sh`
 
 to run the actual installation. Once it is done, you should see a folder called "mylammps" in the same folder where the lammps-install.sh file was located. Feel free to move it wherever else you want.
 
 Follow the same process for the python_install.sh script to load python3, the package manager, pip, and some packages that might be useful.
+
+`sudo chmod +x python_install.sh`
+
+`./python_install.sh`
 
 Further, make sure you follow the instructions of the site and make sure the file structure mathces what's listed on the site; that and making sure the names of the files you read in match within the LAMMPS scripts themselves. Ex. being the Level 1 Graphene under Deformation instructions.
