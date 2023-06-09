@@ -24,7 +24,7 @@ cd mylammps
 
 mkdir build; cd build
 
-cmake ../cmake -D PKG_MOLECULE=yes -D PKG_KSPACE=yes -D PKG_RIGID=yes -D PKG_MANYBODY=yes -D PKG_REAXFF=yes -D PKG_MANYBODY
+cmake ../cmake -D PKG_MOLECULE=yes -D PKG_KSPACE=yes -D PKG_RIGID=yes -D PKG_MANYBODY=yes -D PKG_REAXFF=yes -D PKG_MANYBODY=yes
 
 cmake --build .
 
