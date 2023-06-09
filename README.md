@@ -5,7 +5,7 @@ In the event you don't have LAMMPS built and compiled, download the lammps-insta
 
 The easiest way to download the entirety of this repository would be as follows:
 
-Install Git if you don't have it by typing in your terminal
+Install git if you don't have it by typing in your terminal
 
 `sudo apt update; sudo apt upgrade; sudo apt-get update; sudo apt-get upgrade; sudo apt-get install git `
 
