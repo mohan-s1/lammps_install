@@ -6,7 +6,7 @@ In the event you don't have LAMMPS built and compiled, follow the instructions b
 **(The following commands are all contingent on you having the Linux distribution, Ubuntu)**
 
 The easiest way to download the entirety of this repository would be as follows:
-
+## Git Installation
 Install git if you don't have it by typing in your terminal
 
 `sudo apt update; sudo apt upgrade; sudo apt-get update; sudo apt-get upgrade; sudo apt-get install git `
@@ -14,11 +14,11 @@ Install git if you don't have it by typing in your terminal
 type in your password if requested, type Y if prompted Y/n, and hit enter
 
 Once git is installed, run the following command to download this repository:
-
+## Cloning the Repository
 `git clone https://github.com/mohan-s1/lammps_tutorials.git`
 
 Following this, enter 
-
+## Installation of LAMMPS
 `cd lammps_tutorials`
 
 to move to to the downloaded folder from within the terminal
@@ -42,11 +42,11 @@ For me, this looks like:
 Alternatively, you can add the build folder to the PATH of your shell by following the syntax I have at the end of my zsh config file.
 
 You can follow the same process for the python_install.sh script to load python3, the package manager, pip, and some packages that might be useful.
-
+## Installation of Python & Some Packages
 `sudo chmod +x python_install.sh`
 
 `./python_install.sh`
-
+## Tutorial Completion 
 In terms of completing the LAMMPS tutorials, make sure you follow the instructions of the site and make sure the file structure mathces what's listed on the site; that and making sure the names of the files you read in match within the LAMMPS scripts themselves. Ex. being the Level 1 Graphene under Deformation instructions. Alternatively, you should be able to run everything I have "out of the box" where all input scripts are named 
 
 `input.lammps` 
