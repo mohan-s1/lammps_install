@@ -68,9 +68,15 @@ For me, a sample run of one of these scripts looks like this:
 **Note the Ubuntu terminal is both case and space sensitive**
 
 `cd`
+
 ***insert your path to the build folder where the line below says "PATH"***
+
 `cd PATH/lammps_tutorial`
+
 `cd Tutorials`
+
 `cd lev_0`
+
 `PATH/build/lmp -in input1.lammps`
+
 Hopefully the script should finish running in 1-2 seconds if everything was installed correctly.
