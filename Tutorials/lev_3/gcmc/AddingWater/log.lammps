@@ -1,0 +1,215 @@
+LAMMPS (23 Jun 2022 - Update 4)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:98)
+  using 1 OpenMP thread(s) per MPI task
+# Initialization
+units metal
+boundary p p p
+atom_style full
+neighbor 1.0 bin
+neigh_modify delay 1
+pair_style hybrid/overlay vashishta lj/cut/tip4p/long 3 4 1 1 0.1546 10
+kspace_style pppm/tip4p 1.0e-4
+bond_style harmonic
+angle_style harmonic
+
+# System definition
+read_data dilatedSiO.data
+Reading data file ...
+  orthogonal box = (1.2258943 1.2587857 -3.8781303) to (19.359683 19.326792 24.463708)
+  2 by 1 by 2 MPI processor grid
+  reading atoms ...
+  576 atoms
+  reading velocities ...
+  576 velocities
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     0 = max # of 1-2 neighbors
+     0 = max # of 1-3 neighbors
+     0 = max # of 1-4 neighbors
+     3 = max # of special neighbors
+  special bonds CPU = 0.000 seconds
+  read_data CPU = 0.009 seconds
+molecule h2omol TIP4P2005.txt
+Read molecule template h2omol:
+  1 molecules
+  0 fragments
+  3 atoms with max type 4
+  2 bonds with max type 1
+  1 angles with max type 1
+  0 dihedrals with max type 0
+  0 impropers with max type 0
+lattice sc 3
+Lattice spacing in x,y,z = 3 3 3
+create_atoms 0 box mol h2omol 45585
+Created 1080 atoms
+  using lattice units in orthogonal box = (1.2258943 1.2587857 -3.8781303) to (19.359683 19.326792 24.463708)
+  create_atoms CPU = 0.002 seconds
+lattice none 1
+
+group SiO type 1 2
+576 atoms in group SiO
+group H2O type 3 4
+1080 atoms in group H2O
+
+# Simulation settings
+pair_coeff * * vashishta ../SilicaBlock/SiO.1990.vashishta Si O NULL NULL
+Reading vashishta potential file ../SilicaBlock/SiO.1990.vashishta with DATE: 2015-10-14
+pair_coeff * * lj/cut/tip4p/long 0 0
+pair_coeff 1 3 lj/cut/tip4p/long 0.0057 4.42 # epsilonSi = 0.00403, sigmaSi = 3.69
+pair_coeff 2 3 lj/cut/tip4p/long 0.0043 3.12 # epsilonO = 0.0023, sigmaO = 3.091
+pair_coeff 3 3 lj/cut/tip4p/long 0.008 3.1589
+pair_coeff 4 4 lj/cut/tip4p/long 0.0 0.0
+bond_coeff 1 0 0.9572
+angle_coeff 1 0 104.52
+variable oxygen atom "type==3"
+group oxygen dynamic all var oxygen
+dynamic group oxygen defined
+variable nO equal count(oxygen)
+fix myat1 all ave/time 100 10 1000 v_nO file numbermolecule.dat
+fix shak H2O shake 1.0e-4 200 0 b 1 a 1 mol h2omol
+       0 = # of size 2 clusters
+       0 = # of size 3 clusters
+       0 = # of size 4 clusters
+     360 = # of frozen angles
+  find clusters CPU = 0.000 seconds
+
+delete_atoms overlap 2 H2O SiO mol yes
+System init for delete_atoms ...
+PPPM initialization ...
+  extracting TIP4P info from pair style
+  using 12-bit tables for long-range coulomb (src/kspace.cpp:342)
+  G vector (1/distance) = 0.28268304
+  grid = 12 12 18
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0011285447
+  estimated relative force accuracy = 7.837309e-05
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 2618 720
+WARNING: Using a manybody potential with bonds/angles/dihedrals and special_bond exclusions (src/pair.cpp:239)
+WARNING: Communication cutoff 0 is shorter than a bond length based estimate of 2.4358. This may lead to errors. (src/comm.cpp:727)
+WARNING: Increasing communication cutoff to 12.1118 for TIP4P pair style (src/KSPACE/pair_lj_cut_tip4p_long.cpp:484)
+Neighbor list info ...
+  update every 1 steps, delay 1 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 11.3092
+  ghost atom cutoff = 12.1118
+  binsize = 5.6546, bins = 4 4 6
+  4 neighbor lists, perpetual/occasional/extra = 3 1 0
+  (1) command delete_atoms, occasional, copy from (4)
+      attributes: full, newton on
+      pair build: copy
+      stencil: none
+      bin: none
+  (2) pair vashishta, perpetual, skip from (4)
+      attributes: full, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (3) pair lj/cut/tip4p/long, perpetual, half/full from (4)
+      attributes: half, newton on
+      pair build: halffull/newton
+      stencil: none
+      bin: none
+  (4) neighbor class addition, perpetual
+      attributes: full, newton on
+      pair build: full/bin
+      stencil: full/bin/3d
+      bin: standard
+Neighbor list info ...
+  update every 1 steps, delay 1 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 11.3092
+  ghost atom cutoff = 12.1118
+  binsize = 5.6546, bins = 4 4 6
+  0 neighbor lists, perpetual/occasional/extra = 0 0 0
+WARNING: Ignoring 'compress yes' for molecular system (src/delete_atoms.cpp:140)
+Deleted 993 atoms, new total = 663
+Deleted 662 bonds, new total = 58
+Deleted 331 angles, new total = 29
+dump dmp all atom 1000 dump.init.lammpstrj
+
+# Run
+compute_modify thermo_temp dynamic yes
+compute ctH2O H2O temp
+compute_modify ctH2O dynamic yes
+fix mynvt1 H2O nvt temp 300 300 0.1
+fix_modify mynvt1 temp ctH2O
+WARNING: Temperature for fix modify is not for group all (src/fix_nh.cpp:1423)
+compute ctSiO SiO temp
+fix mynvt2 SiO nvt temp 300 300 0.1
+fix_modify mynvt2 temp ctSiO
+WARNING: Temperature for fix modify is not for group all (src/fix_nh.cpp:1423)
+timestep 0.00001
+thermo 1000
+run 5000
+PPPM initialization ...
+  extracting TIP4P info from pair style
+  using 12-bit tables for long-range coulomb (src/kspace.cpp:342)
+  G vector (1/distance) = 0.27597011
+  grid = 12 12 15
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0010251124
+  estimated relative force accuracy = 7.1190116e-05
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 2431 576
+WARNING: Using a manybody potential with bonds/angles/dihedrals and special_bond exclusions (src/pair.cpp:239)
+Neighbor list info ...
+  update every 1 steps, delay 1 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 11.3092
+  ghost atom cutoff = 12.1118
+  binsize = 5.6546, bins = 4 4 6
+  3 neighbor lists, perpetual/occasional/extra = 3 0 0
+  (1) pair vashishta, perpetual, skip from (3)
+      attributes: full, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (2) pair lj/cut/tip4p/long, perpetual, half/full from (3)
+      attributes: half, newton on
+      pair build: halffull/newton
+      stencil: none
+      bin: none
+  (3) neighbor class addition, perpetual
+      attributes: full, newton on
+      pair build: full/bin
+      stencil: full/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 11.18 | 11.18 | 11.18 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0   273.99368      41356.901      0              41379.319      34704542     
+      1000   81699.699     -6219.0559      0              465.75006      1082380.7    
+      2000   30344.799     -6459.2408      0             -3976.3786      468000.13    
+      3000   13875.062     -6468.7542      0             -5333.4735      214835.49    
+      4000   8169.8366     -6549.2047      0             -5880.735       138263.33    
+      5000   5396.9833     -6619.3107      0             -6177.7205      97276.817    
+Loop time of 17.2465 on 4 procs for 5000 steps with 663 atoms
+
+Performance: 0.250 ns/day, 95.814 hours/ns, 289.914 timesteps/s
+98.5% CPU use with 4 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 10.089     | 12.371     | 15.023     |  60.3 | 71.73
+Bond    | 0.00091012 | 0.0011557  | 0.0014393  |   0.6 |  0.01
+Kspace  | 1.303      | 3.9446     | 6.2163     | 106.4 | 22.87
+Neigh   | 0.19777    | 0.19801    | 0.19822    |   0.0 |  1.15
+Comm    | 0.29389    | 0.30327    | 0.31308    |   1.2 |  1.76
+Output  | 0.0015569  | 0.0016687  | 0.0017089  |   0.2 |  0.01
+Modify  | 0.38594    | 0.39762    | 0.40923    |   1.8 |  2.31
+Other   |            | 0.02928    |            |       |  0.17
+
+Nlocal:         165.75 ave         184 max         152 min
+Histogram: 1 0 0 1 1 0 0 0 0 1
+Nghost:        3725.75 ave        3861 max        3592 min
+Histogram: 1 0 0 0 1 1 0 0 0 1
+Neighs:        35834.8 ave       41003 max       31866 min
+Histogram: 1 0 0 2 0 0 0 0 0 1
+
+Total # of neighbors = 143339
+Ave neighs/atom = 216.19759
+Ave special neighs/atom = 0.26244344
+Neighbor list builds = 94
+Dangerous builds = 0
