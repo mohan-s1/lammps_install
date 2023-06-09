@@ -1,7 +1,7 @@
 # lammps_tutorials
 The purpose of this repository is to have the completed input scripts for https://lammpstutorials.github.io/ readily accessible. 
 
-In the event you don't have LAMMPS built and compiled, download the lammps-install.sh file. Open the folder you downloads folder or wherever you placed it in the terminal. (I am assuming you are running the Linux distribution, Ubuntu).
+In the event you don't have LAMMPS built and compiled, download the lammps-install.sh file. Open the folder you downloads folder or wherever you placed it in the terminal. (The following commands are all contingent on you having the Linux distribution, Ubuntu.)
 
 The easiest way to download the entirety of this repository would be as follows:
 
