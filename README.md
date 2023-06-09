@@ -1,4 +1,4 @@
-# lammps_tutorials
+# LAMMPS Tutorials
 The purpose of this repository is to have the completed input scripts for https://lammpstutorials.github.io/ readily accessible. 
 
 In the event you don't have LAMMPS built and compiled, follow the instructions below.
