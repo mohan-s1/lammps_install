@@ -16,7 +16,11 @@ sudo apt-get install git
 
 sudo apt-get install cmake
 
-sudo apt-get install openmpi-bin
+sudo apt-get install openmpi-bin openmpi-common libopenmpi-dev libgtk2.0-dev
+
+sudo apt-get update
+
+sudo apt-get dist-upgrade
 
 git clone -b release https://github.com/lammps/lammps.git mylammps
 
