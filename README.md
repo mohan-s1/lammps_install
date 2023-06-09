@@ -33,12 +33,26 @@ Following this command, enter
 
 `./lammps_install.sh`
 
-to run the actual installation. Once it is done, you should see a folder called "mylammps" in the the lammps_tutorials folder where the lammps-install.sh file was located. Feel free to move "mylammps"  wherever you want and rename it as you see fit.
+to run the actual installation. Once it is done, you should see a folder called "mylammps" in the the lammps_tutorials folder where the lammps-install.sh file was located. This folder should contain, among others, folders called "src," "build," and "cmake." In order to run a LAMMPS script, you must copy the path to your build folder and end it with /lmp before entering the " -in file.lammps"
 
-Follow the same process for the python_install.sh script to load python3, the package manager, pip, and some packages that might be useful.
+For me, this looks like:
+
+`/home/dell/lammps/build/lmp -in filename.lammps`
+
+Alternatively, you can add the build folder to the PATH of your shell by following the syntax I have at the end of my zsh config file.
+
+You can follow the same process for the python_install.sh script to load python3, the package manager, pip, and some packages that might be useful.
 
 `sudo chmod +x python_install.sh`
 
 `./python_install.sh`
 
-Further, make sure you follow the instructions of the site and make sure the file structure mathces what's listed on the site; that and making sure the names of the files you read in match within the LAMMPS scripts themselves. Ex. being the Level 1 Graphene under Deformation instructions. Alternatively, you can download 
+In terms of completing the LAMMPS tutorials, make sure you follow the instructions of the site and make sure the file structure mathces what's listed on the site; that and making sure the names of the files you read in match within the LAMMPS scripts themselves. Ex. being the Level 1 Graphene under Deformation instructions. Alternatively, you should be able to run everything I have "out of the box" where all input scripts are named 
+
+`input.lammps` 
+
+except for those in the 
+
+`lev_0`
+
+directory
