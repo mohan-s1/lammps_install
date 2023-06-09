@@ -15,7 +15,11 @@ Once git is installed, run the following command:
 
 `git clone https://github.com/mohan-s1/lammps_tutorials.git`
 
-Following this, open the lammps_tutorials folder in your terminal
+Following this, enter 
+
+`cd lammps_tutorials`
+
+to move to to the downloaded folder from within the terminal
 
 Enter 
 
@@ -27,7 +31,7 @@ Following this command, enter
 
 `./lammps_install.sh`
 
-to run the actual installation. Once it is done, you should see a folder called "mylammps" in the same folder where the lammps-install.sh file was located. Feel free to move it wherever else you want.
+to run the actual installation. Once it is done, you should see a folder called "mylammps" in the the lammps_tutorials folder where the lammps-install.sh file was located. Feel free to move "mylammps"  wherever you want and rename it as you see fit.
 
 Follow the same process for the python_install.sh script to load python3, the package manager, pip, and some packages that might be useful.
 
