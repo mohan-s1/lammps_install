@@ -1,7 +1,7 @@
 # lammps_tutorials
 The purpose of this repository is to have the completed input scripts for https://lammpstutorials.github.io/ readily accessible. 
 
-In the event you don't have LAMMPS built and compiled, download the lammps-install.sh file. Open the folder you downloads folder or wherever you placed it in the terminal. 
+In the event you don't have LAMMPS built and compiled, follow the instructions below.
 
 **(The following commands are all contingent on you having the Linux distribution, Ubuntu)**
 
@@ -13,7 +13,7 @@ Install git if you don't have it by typing in your terminal
 
 type in your password if requested, type Y if prompted Y/n, and hit enter
 
-Once git is installed, run the following command:
+Once git is installed, run the following command to download this repository:
 
 `git clone https://github.com/mohan-s1/lammps_tutorials.git`
 
@@ -33,7 +33,7 @@ Following this command, enter
 
 `./lammps_install.sh`
 
-to run the actual installation. Once it is done, you should see a folder called "mylammps" in the the lammps_tutorials folder where the lammps-install.sh file was located. This folder should contain, among others, folders called "src," "build," and "cmake." In order to run a LAMMPS script, you must copy the path to your build folder and end it with /lmp before entering the " -in file.lammps"
+to run the actual installation. Once it is done, you should see a folder called "mylammps" in the the lammps_tutorials folder. mylammps should contain, among others, folders called "src," "build," and "cmake." In order to run a LAMMPS script, you must copy the path to your build folder and end it with /lmp before entering the " -in file.lammps"
 
 For me, this looks like:
 
@@ -55,4 +55,22 @@ except for those in the
 
 `lev_0`
 
-directory
+directory where the three inputs are named 
+
+`input1.lammps`
+`input2.lammps`
+`input3.lammps`
+
+respectively.
+
+For me, a sample run of one of these scripts looks like this:
+
+**Note the Ubuntu terminal is both case and space sensitive**
+
+`cd`
+***insert your path to the build folder where the line below says "PATH"***
+`cd PATH/lammps_tutorial`
+`cd Tutorials`
+`cd lev_0`
+`PATH/build/lmp -in input1.lammps`
+Hopefully the script should finish running in 1-2 seconds if everything was installed correctly.
