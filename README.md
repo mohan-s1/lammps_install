@@ -13,7 +13,7 @@ in your terminal. If you have it, some output
 
 `git version x.xx.x`
 
-should appear otherwise follow the ***Git Installation*** process below
+should appear. If not,follow the procedure listed in ***Git Installation*** below
 
 ## Git Installation
 Install git if you don't have it by typing in your terminal
