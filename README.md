@@ -5,7 +5,7 @@ In the event you don't have LAMMPS built and compiled, follow the instructions b
 
 **The following commands are all contingent on you having the Linux distribution, Ubuntu**
 
-The easiest way to download the entirety of this repository would be to follow the steps starting at ***Cloning the Repository*** which is dependent on you having git installed. You can check if you have git by typing:
+The easiest way to download the entirety of this repository and compile LAMMPS would be to follow the steps starting at ***Cloning the Repository*** which is dependent on you having git installed. You can check if you have git by typing:
 
 `git --version`
 
