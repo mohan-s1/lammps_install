@@ -3,9 +3,18 @@ The purpose of this repository is to have the completed input scripts for https:
 
 In the event you don't have LAMMPS built and compiled, follow the instructions below.
 
-**(The following commands are all contingent on you having the Linux distribution, Ubuntu)**
+**The following commands are all contingent on you having the Linux distribution, Ubuntu**
 
-The easiest way to download the entirety of this repository would be as follows:
+The easiest way to download the entirety of this repository would be to follow the steps starting at ***Cloning the Repository*** which is dependent on you having git installed. You can check if you have git by typing:
+
+`git --version`
+
+in your terminal. If you have it, some output 
+
+`git version x.xx.x`
+
+should appear otherwise follow the ***Git Installation*** process below
+
 ## Git Installation
 Install git if you don't have it by typing in your terminal
 
