@@ -3,6 +3,18 @@ The purpose of this repository is to have the completed input scripts for https:
 
 In the event you don't have LAMMPS built and compiled, download the lammps-install.sh file. Open the folder you downloads folder or wherever you placed it in the terminal. (I am assuming you are running the Linux distribution, Ubuntu).
 
+The easiest way to download the entirety of this repository would be as follows:
+
+Install Git if you don't have it by typing in your terminal
+
+`sudo apt update; sudo apt upgrade; sudo apt-get update; sudo apt-get upgrade; sudo apt-get install git `
+
+Once git is installed, run the following command:
+
+`git clone https://github.com/mohan-s1/lammps_tutorials.git`
+
+Following this, open the lammps_tutorials folder in your terminal
+
 Enter 
 
 `sudo chmod +x lammps_install.sh`
