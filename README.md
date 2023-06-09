@@ -69,13 +69,15 @@ For me, a sample run of one of these scripts looks like this:
 
 `cd`
 
-***insert your path to the build folder where the line below says "PATH"***
+***insert your path to the lammps_tutorial folder where the line below says "PATH"***
 
 `cd PATH/lammps_tutorial`
 
 `cd Tutorials`
 
 `cd lev_0`
+
+***insert your path to the build folder where the line below says "PATH"***
 
 `PATH/build/lmp -in input1.lammps`
 
