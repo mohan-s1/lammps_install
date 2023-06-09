@@ -9,6 +9,8 @@ Install Git if you don't have it by typing in your terminal
 
 `sudo apt update; sudo apt upgrade; sudo apt-get update; sudo apt-get upgrade; sudo apt-get install git `
 
+type in your password if requested, type Y if prompted Y/n, and hit enter
+
 Once git is installed, run the following command:
 
 `git clone https://github.com/mohan-s1/lammps_tutorials.git`
@@ -19,7 +21,7 @@ Enter
 
 `sudo chmod +x lammps_install.sh`
 
-type in your passwrod, then hit enter/return to make the file executable
+type in your password if prompted, then hit enter/return to make the file executable
 
 Following this command, enter
 
