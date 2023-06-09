@@ -21,7 +21,7 @@ Following this, enter
 
 to move to to the downloaded folder from within the terminal
 
-Enter 
+Once in lammps_tutorials, enter 
 
 `sudo chmod +x lammps_install.sh`
 
