@@ -3,9 +3,7 @@ The purpose of this repository is to have the completed input scripts for https:
 
 In the event you don't have LAMMPS built and compiled, download the lammps-install.sh file. Open the folder you downloads folder or wherever you placed it in the terminal. Enter 
 
-
-sudo chmod +x lammps_install.sh
-
+`sudo chmod +x lammps_install.sh`
 
 type in your passwrod, then hit enter/return to make the file executable
 
