@@ -22,8 +22,13 @@ Install git if you don't have it by typing in your terminal
 
 type in your password if requested, type Y if prompted Y/n, and hit enter
 
-Once git is installed, run the following command to download this repository:
+Check git was installed by running 
+
+`git --version`
+
 ## Cloning the Repository
+Once you have git, run
+
 `git clone https://github.com/mohan-s1/lammps_tutorials.git`
 
 Following this, enter 
