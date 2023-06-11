@@ -5,7 +5,7 @@ In the event you don't have LAMMPS built and compiled, follow the instructions b
 
 For Windows users, I recommend getting WSL (Windows Subsystem for Linux) from the Microsoft Store, particularly obtaining Ubuntu 22.04 LTS. If you have a Unix system like MacOS you should be fine. In the event you run Linux natively, the following scripts have only been tested for Ubuntu since that is the syntax I know best.
 
-## Ubunutu Installation Process
+## LAMMPS Installation for Ubuntu
 
 The easiest way to download the entirety of this repository and compile LAMMPS would be to follow the steps starting at ***Cloning the Repository*** which is dependent on you having git installed. You can check if you have git by typing:
 
@@ -67,7 +67,7 @@ Navigate back to the lammps_install folder by typing
 
 `./python_ubuntu_install.sh`
 
-## MacOS Installation Process
+## LAMMPS Installation for MacOS
 
 The easiest way to download the entirety of this repository and compile LAMMPS would be to follow the steps starting at ***Cloning the Repository*** which is dependent on you having git installed. You can check if you have git by typing:
 
