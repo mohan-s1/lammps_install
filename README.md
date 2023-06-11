@@ -33,11 +33,11 @@ Check git was installed by running
 ### Cloning the Repository
 Once you have git, run
 
-`git clone https://github.com/mohan-s1/lammps_tutorials.git`
+`git clone https://github.com/mohan-s1/lammps_install.git`
 
 Following this, enter 
 ### Installation of LAMMPS
-`cd lammps_tutorials`
+`cd lammps_install`
 
 to move to to the downloaded folder from within the terminal
 
@@ -51,7 +51,7 @@ Following this command, enter
 
 `./lammps_ubuntu_install.sh`
 
-to run the actual installation. Once it is done, you should see a folder called "mylammps" in the the lammps_tutorials folder. mylammps should contain, among others, folders called "src," "build," and "cmake." In order to run a LAMMPS script, you must copy the path to your build folder and end it with /lmp before entering the " -in file.lammps"
+to run the actual installation. Once it is done, you should see a folder called "mylammps" in the the lammps_install folder. mylammps should contain, among others, folders called "src," "build," and "cmake." In order to run a LAMMPS script, you must copy the path to your build folder and end it with /lmp before entering the " -in file.lammps"
 
 For me, this looks like:
 
@@ -112,15 +112,15 @@ If it shows Git is installed, follow the subsequent steps
 ### Cloning the Repository
 Once you have git, run
 
-`git clone https://github.com/mohan-s1/lammps_tutorials.git`
+`git clone https://github.com/mohan-s1/lammps_install.git`
 
 Following this, enter 
 ### Installation of LAMMPS
-`cd lammps_tutorials`
+`cd lammps_install`
 
 to move to to the downloaded folder from within the terminal
 
-Once in lammps_tutorials, enter 
+Once in lammps_install, enter 
 
 `sudo chmod +x lammps_mac_install.sh`
 
@@ -130,7 +130,7 @@ Following this command, enter
 
 `./lammps_mac_install.sh`
 
-to run the actual installation. Once it is done, you should see a folder called "mylammps" in the the lammps_tutorials folder. mylammps should contain, among others, folders called "src," "build," and "cmake." In order to run a LAMMPS script, you must copy the path to your build folder and end it with /lmp before entering the " -in file.lammps"
+to run the actual installation. Once it is done, you should see a folder called "mylammps" in the the lammps_install folder. mylammps should contain, among others, folders called "src," "build," and "cmake." In order to run a LAMMPS script, you must copy the path to your build folder and end it with /lmp before entering the " -in file.lammps"
 
 For me, this looks like:
 
@@ -168,9 +168,9 @@ For me, a sample run of one of these scripts looks like this:
 
 `cd`
 
-`cd lammps_tutorials/Tutorials/lev_0/`
+`cd lammps_install/Tutorials/lev_0/`
 
-`~/lammps_tutorials/mylammps/build/lmp -in input1.lammps`
+`~/lammps_installs/mylammps/build/lmp -in input1.lammps`
 
 ## Text Editor Recommendation
 
