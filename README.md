@@ -61,6 +61,36 @@ You can follow the same process for the python_install.sh script to load python3
 
 `./python_install.sh`
 
+## MacOS Installation Process
+
+The easiest way to download the entirety of this repository and compile LAMMPS would be to follow the steps starting at ***Cloning the Repository*** which is dependent on you having git installed. You can check if you have git by typing:
+
+`git --version`
+
+in your terminal. If you have it, some output 
+
+`git version x.xx.x`
+
+should appear. If not,follow the procedure listed in ***Homebrew and Git Installation*** below
+
+### Homebrew and Git Installation
+
+The following set of instructions is contingent on you having the MacOS pacakge manager, Homebrew. You can check if you have it by typing 
+
+`brew --version`
+
+in the terminal. If nothing comes up, follow the subsequent instructions.
+
+Install Command Line Tools as a necessary precursor to obtaining Homebrew. This can be done by entering
+
+`xcode-select --install`
+
+in your terminal, running it, and accepting whatever changes it asks to make. From there, you can run the following command per [Homebrew's website](https://brew.sh/) to download the software:
+
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+words
+ 
 # Tutorial Completion 
 In terms of completing the LAMMPS tutorials, make sure you follow the instructions of the site and make sure the file structure mathces what's listed on the site; that and making sure the names of the files you read in match within the LAMMPS scripts themselves. Ex. being the Level 1 Graphene under Deformation instructions. Alternatively, you should be able to run everything I have "out of the box" where all input scripts are named 
 
