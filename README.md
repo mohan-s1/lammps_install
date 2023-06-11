@@ -142,7 +142,7 @@ You can follow the same process for the python_mac_install.sh script to load pyt
 
  
 # Tutorial Completion 
-In terms of completing the LAMMPS tutorials, make sure you follow the instructions of the [https://lammpstutorials.github.io/](site) and make sure the file structure mathces what's listed on the site; that and making sure the names of the files you read in match within the LAMMPS scripts themselves. Ex. being the Level 1 Graphene under Deformation instructions. Alternatively, you should be able to run everything I have "out of the box" where all input scripts are named 
+In terms of completing the LAMMPS tutorials, make sure you follow the instructions of the [site](https://lammpstutorials.github.io/) and make sure the file structure mathces what's listed on the site; that and making sure the names of the files you read in match within the LAMMPS scripts themselves. Ex. being the Level 1 Graphene under Deformation instructions. Alternatively, you should be able to run everything I have "out of the box" where all input scripts are named 
 
 `input.lammps` 
 
