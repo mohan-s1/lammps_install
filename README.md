@@ -7,6 +7,8 @@ For Windows users, I recommend getting WSL (Windows Subsystem for Linux) from th
 
 ## LAMMPS Installation for Ubuntu
 
+***Run the following commands in WSL if you use Windows***
+
 The easiest way to download the entirety of this repository and compile LAMMPS would be to follow the steps starting at ***Cloning the Repository*** which is dependent on you having git installed. You can check if you have git by typing:
 
 `git --version`
