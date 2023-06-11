@@ -160,23 +160,13 @@ respectively.
 
 For me, a sample run of one of these scripts looks like this:
 
-**Note that the terminal for Ubuntu and MacOS is both case and space sensitive**
+### For Ubuntu:
 
 `cd`
 
-***insert your path to the lammps_tutorial folder where the line below says "PATH"***
+`cd lammps_install/Tutorials/lev_0/`
 
-`cd PATH/lammps_tutorial`
-
-`cd Tutorials`
-
-`cd lev_0`
-
-***insert your path to the build folder where the line below says "PATH"***
-
-`PATH/build/lmp -in input1.lammps`
-
-Hopefully the script should finish running in 1-2 seconds if everything was installed correctly.
+`lammps_install/mylammps/build/lmp -in input1.lammps`
 
 ## Text Editor Recommendation
 
