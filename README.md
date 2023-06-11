@@ -160,7 +160,7 @@ respectively.
 
 For me, a sample run of one of these scripts looks like this:
 
-### For Ubuntu:
+### For Ubuntu and MacOS:
 
 `cd`
 
