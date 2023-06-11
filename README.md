@@ -177,3 +177,33 @@ For me, a sample run of one of these scripts looks like this:
 `PATH/build/lmp -in input1.lammps`
 
 Hopefully the script should finish running in 1-2 seconds if everything was installed correctly.
+
+## Text Editor Recommendation
+
+Personally, I would recommend using [VSCode](https://code.visualstudio.com/download) as your text editor of choice for LAMMPS and Python scripting. It comes with extensions for both that makes writing significantly easier. The LAMMPS extension is by ThFriedrich with ~17,000 downloads and the Python extension was made by Microsoft with ~88,000,000 million downloads. If you're using a Windows based machine while running WSL for Ubuntu, you should get the WSL extension by Microsoft in addition to the LAMMPS and Python ones. I've noticed that for MacOS, getting VSCode after running the python_mac_install.sh script causes VSCode to not recognize the packages that were downloaded. Consequently, I've included a script named 
+
+`py_mac_packages.sh`
+
+for MacOS and 
+
+`py_ubu_pacakges.sh` 
+
+for Ubuntu if you need to re-install them for whatever reason.
+
+You will follow the same procedure of navigating to the lammps_install folder then running
+
+`sudo chmod -x py_mac_packages.sh`
+
+or
+
+`sudo chmod -x py_ubu_packages.sh`
+
+depending on your system then executing them using
+
+`./py_mac_packages.sh`
+
+or 
+
+`./py_ubu_packages.sh`
+
+From there, 
