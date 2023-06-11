@@ -89,7 +89,11 @@ in your terminal, running it, and accepting whatever changes it asks to make. Fr
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-words
+Press return/enter to proceed with the installation; press any other key to opt out.
+
+Once you have Homebrew, install Git using the following commande:
+
+`brew install git`
  
 # Tutorial Completion 
 In terms of completing the LAMMPS tutorials, make sure you follow the instructions of the site and make sure the file structure mathces what's listed on the site; that and making sure the names of the files you read in match within the LAMMPS scripts themselves. Ex. being the Level 1 Graphene under Deformation instructions. Alternatively, you should be able to run everything I have "out of the box" where all input scripts are named 
