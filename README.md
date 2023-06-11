@@ -89,7 +89,7 @@ in your terminal, running it, and accepting whatever changes it asks to make. Fr
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-Press return/enter to proceed with the installation; press any other key to opt out. Be sure to add Homebrew to *PATH* by running the commands it tells you to upon the completion of its installation.
+Press return/enter to proceed with the installation; press any other key to opt out. Be sure to add Homebrew to *PATH* by running the commands it tells you under the bolded text saying **Next Steps:** once Homebrew is done installing.
 
 Once you have Homebrew, install Git using the following command:
 
