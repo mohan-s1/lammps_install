@@ -57,6 +57,10 @@ Alternatively, you can add the build folder to the PATH of your shell by followi
 
 You can follow the same process for the python_install.sh script to load python3, the package manager, pip, and some packages that might be useful.
 ### Installation of Python & Some Packages
+Navigate back to the lammps_install folder by typing
+
+`cd ../..`
+
 `sudo chmod +x python_install.sh`
 
 `./python_install.sh`
