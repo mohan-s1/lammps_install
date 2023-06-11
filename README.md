@@ -166,7 +166,7 @@ For me, a sample run of one of these scripts looks like this:
 
 `cd lammps_install/Tutorials/lev_0/`
 
-`lammps_install/mylammps/build/lmp -in input1.lammps`
+`~/lammps_install/mylammps/build/lmp -in input1.lammps`
 
 ## Text Editor Recommendation
 
