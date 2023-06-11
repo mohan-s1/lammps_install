@@ -1,5 +1,5 @@
 # LAMMPS Tutorials
-The purpose of this repository is to have the completed input scripts for https://lammpstutorials.github.io/ readily accessible. 
+The purpose of this repository is to have the completed input scripts for https://lammpstutorials.github.io/ readily accessible via the "Tutorials" folder.
 
 In the event you don't have LAMMPS built and compiled, follow the instructions below.
 
@@ -94,6 +94,48 @@ Press return/enter to proceed with the installation; press any other key to opt 
 Once you have Homebrew, install Git using the following commande:
 
 `brew install git`
+
+Check git was installed by running 
+
+`git --version`
+
+If it shows Git is installed, follow the subsequent steps
+
+### Cloning the Repository
+Once you have git, run
+
+`git clone https://github.com/mohan-s1/lammps_tutorials.git`
+
+Following this, enter 
+### Installation of LAMMPS
+`cd lammps_tutorials`
+
+to move to to the downloaded folder from within the terminal
+
+Once in lammps_tutorials, enter 
+
+`sudo chmod +x lammps_install.sh`
+
+type in your password if prompted, then hit enter/return to make the file executable
+
+Following this command, enter
+
+`./lammps_install.sh`
+
+to run the actual installation. Once it is done, you should see a folder called "mylammps" in the the lammps_tutorials folder. mylammps should contain, among others, folders called "src," "build," and "cmake." In order to run a LAMMPS script, you must copy the path to your build folder and end it with /lmp before entering the " -in file.lammps"
+
+For me, this looks like:
+
+`/home/dell/lammps/build/lmp -in filename.lammps`
+
+Alternatively, you can add the build folder to the PATH of your shell by following the syntax I have at the end of my zsh config file.
+
+You can follow the same process for the python_mac_install.sh script to load python3, the package manager, pip, and some packages that might be useful.
+### Installation of Python & Some Packages
+`sudo chmod +x python_install.sh`
+
+`./python_install.sh`
+
  
 # Tutorial Completion 
 In terms of completing the LAMMPS tutorials, make sure you follow the instructions of the site and make sure the file structure mathces what's listed on the site; that and making sure the names of the files you read in match within the LAMMPS scripts themselves. Ex. being the Level 1 Graphene under Deformation instructions. Alternatively, you should be able to run everything I have "out of the box" where all input scripts are named 
