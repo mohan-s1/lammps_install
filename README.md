@@ -1,7 +1,7 @@
 # LAMMPS Tutorials
 The purpose of this repository is to have the completed input scripts for https://lammpstutorials.github.io/ readily accessible via the "Tutorials" folder.
 
-In the event you don't have LAMMPS built and compiled, follow the instructions below.
+In the event you don't have LAMMPS built and compiled, follow the instructions below. For Windows users, I recommend getting WSL (Windows Subsystem for Linux) from the Microsoft Store, particularly obtaining Ubuntu 22.04 LTS. If you have a Unix system like MacOS you should be fine. In the event you run Linux natively, the following scripts have only been tested for Ubuntu since that is the syntax I know best.
 
 ## Ubunutu Installation Process
 
