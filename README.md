@@ -61,9 +61,9 @@ Navigate back to the lammps_install folder by typing
 
 `cd ../..`
 
-`sudo chmod +x python_install.sh`
+`sudo chmod +x python_ubuntu_install.sh`
 
-`./python_install.sh`
+`./python_ubuntu_install.sh`
 
 ## MacOS Installation Process
 
