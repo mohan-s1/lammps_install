@@ -166,9 +166,9 @@ For me, a sample run of one of these scripts looks like this:
 
 `cd`
 
-`cd lammps_install/Tutorials/lev_0/`
+`cd lammps_tutorials/Tutorials/lev_0/`
 
-`~/lammps_install/mylammps/build/lmp -in input1.lammps`
+`~/lammps_tutorials/mylammps/build/lmp -in input1.lammps`
 
 ## Text Editor Recommendation
 
@@ -182,7 +182,7 @@ for MacOS and
 
 for Ubuntu if you need to re-install them for whatever reason.
 
-You will follow the same procedure of navigating to the lammps_install folder then running
+You will follow the same procedure of navigating to the lammps_tutorials folder then run
 
 `sudo chmod -x py_mac_packages.sh`
 
@@ -198,4 +198,4 @@ or
 
 `./py_ubu_packages.sh`
 
-From there, 
+From there, you should be set.
