@@ -4,6 +4,8 @@ brew install cmake
 
 brew install open-mpi
 
+cd
+
 git clone -b release https://github.com/lammps/lammps.git mylammps
 
 cd mylammps
