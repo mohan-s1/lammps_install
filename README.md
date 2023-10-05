@@ -51,11 +51,11 @@ Following this command, enter
 
 `./lammps_ubuntu_install.sh`
 
-to run the actual installation. Once it is done, you should see a folder called "mylammps" in the the lammps_install folder. mylammps should contain, among others, folders called "src," "build," and "cmake." In order to run a LAMMPS script, you must copy the path to your build folder and end it with /lmp before entering the " -in file.lammps"
+to run the actual installation. Once it is done, you should see a folder called "mylammps" in the same parent directory as the lammps_install folder. mylammps should contain, among others, folders called "src," "build," and "cmake." In order to run a LAMMPS script, you must copy the path to your build folder and end it with /lmp before entering the " -in file.lammps"
 
 For me, this looks like:
 
-`/home/dell/lammps/build/lmp -in filename.lammps`
+`~/mylammps/build/lmp -in filename.lammps`
 
 Alternatively, you can add the build folder to the PATH of your shell by following the syntax I have at the end of my zsh config file.
 
