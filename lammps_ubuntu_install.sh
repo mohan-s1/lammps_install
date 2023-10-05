@@ -22,6 +22,8 @@ sudo apt-get update
 
 sudo apt-get dist-upgrade
 
+cd
+
 git clone -b release https://github.com/lammps/lammps.git mylammps
 
 cd mylammps
